@@ -1,8 +1,8 @@
 const connection = require('./config/conf');
 const express = require('express');
 const bodyParser = require('body-parser');
-const app = express();
 const cors = require('cors'); // npm install cors
+const app = express();
 const port = 8000;
 
 app.use(bodyParser.json());
@@ -11,6 +11,10 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(cors())
 
+// TEST
+app.get('/', (req, res) => {
+  res.send('Bienvenue sur Express');
+});
 
 
 
