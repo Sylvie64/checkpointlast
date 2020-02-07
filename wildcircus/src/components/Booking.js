@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-import back from '../img/arrowb.png'
+import back from '../img/arrow-back.png'
 import logoOk from '../img/logoOk.png';
 import '../App.css'
 
@@ -43,12 +43,9 @@ class Booking extends Component {
   render(){
     return(
       <div className="form-users">
-          <Link className="link-back-arrow" to="/Home">
-            <figure className="fig-back-arrow">
-              <img className="back-arrow" src={back} alt="Arrow to back"/>
-            </figure>
-          </Link>
-          
+          <div className= "title-form">
+            RESERVATIONS
+          </div>          
           <div className="div-add-user">
             <label htmlFor="lastname">Nom</label>
             <input type="text" id="lastname" onChange={this.change} />
